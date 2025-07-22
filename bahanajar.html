@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mengenal Perasaan – Bahasa Indonesia</title>
+
+  <!-- Google Font lucu untuk anak SD -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --warna-utama: #ff80ab;
+      --warna-lembut: #ffe3ec;
+      --warna-teks: #4a148c;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(135deg, var(--warna-lembut), #ffffff 60%);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .back-link {
+      margin: 1.2rem 2rem 0;
+      text-decoration: none;
+      color: var(--warna-teks);
+      font-weight: bold;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    .subject-header {
+      font-size: 2.2rem;
+      font-weight: 600;
+      color: var(--warna-teks);
+      padding: 1.5rem 2rem 0 2rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .subtopics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+      padding: 2rem;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 20px;
+      padding: 1.5rem 1rem 3.5rem;
+      box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-6px) scale(1.02);
+      box-shadow: 0 12px 18px rgba(0, 0, 0, 0.12);
+    }
+
+    .card .emoji {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card .title {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+    }
+
+    .view-btn {
+      position: absolute;
+      bottom: -64px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: var(--warna-utama);
+      color: white;
+      border: none;
+      padding: 0.5rem 1.4rem;
+      border-radius: 30px;
+      font-weight: bold;
+      font-size: 0.9rem;
+      text-decoration: none;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      transition: bottom 0.4s ease;
+    }
+
+    .card.open .view-btn {
+      bottom: 1.2rem;
+    }
+
+    .card.open {
+      animation: bounce 0.35s;
+    }
+
+    @keyframes bounce {
+      0% { transform: scale(1); }
+      50% { transform: scale(0.96); }
+      100% { transform: scale(1); }
+    }
+
+    @media (max-width: 480px) {
+      .subject-header {
+        font-size: 1.6rem;
+        padding-top: 1rem;
+      }
+
+      .view-btn {
+        font-size: 0.8rem;
+        padding: 0.4rem 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Link kembali -->
+  <a class="back-link" href="bahasa_indonesia.html">← Kembali ke Daftar</a>
+
+  <!-- Judul -->
+  <div class="subject-header">📚 Mengenal Perasaan</div>
+
+  <!-- Kartu Sub-Topik -->
+  <section class="subtopics">
+    <div class="card">
+      <span class="emoji">😄</span>
+      <span class="title">Topik 1 - Mengenal Perasaan</span>
+      <a class="view-btn" href="https://drive.google.com./drive/folders/1Dp9TKHYIhR21S25JN2r3Mz-7t3sVdrvX">LIHAT</a>
+    </div>
+
+    <div class="card">
+      <span class="emoji">💸</span>
+      <span class="title">Topik 2 - Perasaan Terkait Pengalaman Pribadi</span>
+      <a class="view-btn" href="#">LIHAT</a>
+    </div>
+
+    <div class="card">
+      <span class="emoji">🕵️‍♂️</span>
+      <span class="title">Topik 3 - Puisi</span>
+      <a class="view-btn" href="#">LIHAT</a>
+    </div>
+  </section>
+
+  <!-- Script Interaktif -->
+  <script>
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        if (e.target.classList.contains("view-btn")) return;
+        card.classList.toggle("open");
+      });
+    });
+  </script>
+</body>
+</html>

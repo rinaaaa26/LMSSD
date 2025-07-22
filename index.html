@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Pembelajaran SD</title>
+
+  <!-- Google Font lucu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      font-family: 'Fredoka', sans-serif;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+    }
+
+    .sidebar img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+    .sidebar nav ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .sidebar nav ul li {
+      margin-bottom: 16px;
+    }
+
+    .sidebar nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      font-size: 16px;
+      display: block;
+      padding: 10px 12px;
+      border-radius: 8px;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar nav a:hover {
+      background-color: #f0f0f0;
+    }
+
+    .sidebar nav a.active {
+      background-color: #d1eaff;
+      color: #007acc;
+    }
+
+    /* Sisanya tidak diubah */
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <img src="logosd1.jpg" alt="Logo SD" />
+    <nav>
+      <ul>
+        <li><a class="active" href="#">Daftar Mata Pelajaran</a></li>
+        <li><a href="https://omegaedu.carrd.co/#home" target="_blank">Beranda</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main -->
+  <main>
+    <header class="topbar">
+      <h1>🏫 Online Ilmu All In U</h1>
+      <div class="lang-switch">EN | ID</div>
+    </header>
+
+    <section class="table-wrapper">
+      <h3>Daftar Mata Pelajaran</h3>
+      <table id="courseTable">
+        <thead>
+          <tr>
+            <th></th>
+            <th>KODE</th>
+            <th>MATA PELAJARAN</th>
+            <th>TAHUN</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="matematika" data-link="subjects/matematika.html">
+            <td class="icon">🧮</td><td>SD001</td><td>MATEMATIKA</td><td>2025/2026</td>
+          </tr>
+          <tr class="ipa" data-link="subjects/bsunda.html">
+            <td class="icon">🔬</td><td>SD002</td><td>BAHASA SUNDA </td><td>2025/2026</td>
+          </tr>
+          <tr class="ips" data-link="subjects/pai.html">
+            <td class="icon">🌍</td><td>SD003</td><td>PENDIDIKAN AGAMA ISLAM </td><td>2025/2026</td>
+          </tr>
+          <tr class="bindo" data-link="bahasa_indonesia.html">
+            <td class="icon">📖</td><td>SD004</td><td>BAHASA INDONESIA </td><td>2025/2026</td>
+          </tr>
+          <tr class="bing" data-link="subjects/bahasa_inggris.html">
+            <td class="icon">🗣️</td><td>SD005</td><td>BAHASA INGGRIS </td><td>2025/2026</td>
+          </tr>
+          <tr class="pkn" data-link="subjects/pp.html">
+            <td class="icon">🇮🇩</td><td>SD006</td><td>PENDIDIKAN PANCASILA </td><td>2025/2026</td>
+          </tr>
+          <tr class="seni" data-link="subjects/seni_budaya.html">
+            <td class="icon">🎨</td><td>SD007</td><td>SENI BUDAYA </td><td>2025/2026</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <footer>&copy; 2025 – SD Nusantara</footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

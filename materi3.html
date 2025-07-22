@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Berhati Hati di Mana Saja – Bahasa Indonesia</title>
+
+  <!-- Google Font lucu -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --bi-main: #ff6f91;
+      --bi-light: #ffe0f0;
+      --card-radius: 20px;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Fredoka', sans-serif;
+      background: linear-gradient(to bottom right, #fff3f8, #ffe0f0);
+      background-repeat: repeat;
+      min-height: 100vh;
+    }
+
+    .back-link {
+      display: block;
+      margin: 1rem 2rem 0;
+      font-size: 1rem;
+      color: var(--bi-main);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .subject-header {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      color: var(--bi-main);
+      margin: 1rem 0;
+    }
+
+    .subtopics {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.2rem;
+      padding: 1rem 2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: var(--card-radius);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 1rem 1rem 1.5rem;
+      text-align: center;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 14px rgba(0,0,0,0.15);
+    }
+
+    .emoji {
+      font-size: 2.8rem;
+      display: block;
+      margin-bottom: 0.5rem;
+    }
+
+    .title {
+      display: block;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 1rem;
+    }
+
+    .view-btn {
+      background-color: var(--bi-main);
+      color: #fff;
+      border: none;
+      border-radius: 30px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .view-btn:hover {
+      background-color: #e5507e;
+    }
+
+    .content-detail {
+      display: none;
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      text-align: left;
+      color: #555;
+    }
+
+    .card.open .content-detail {
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      .subject-header {
+        font-size: 1.6rem;
+      }
+
+      .subtopics {
+        padding: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <a class="back-link" href="bahasa_indonesia.html">← Kembali ke Daftar</a>
+
+  <div class="subject-header">📖 Berhati Hati di Mana Saja</div>
+
+  <section class="subtopics">
+
+    <!-- Kartu 1 -->
+    <div class="card">
+      <span class="emoji">🎭</span>
+      <span class="title">Bahan Ajar</span>
+      <div class="content-detail">
+        <strong>Capaian Pembelajaran:</strong>
+        <ul>
+          <li>Mengungkapkan perasaan dan gagasan secara lisan dengan atau tanpa gambar.</li>
+        </ul>
+        <strong>Tujuan Pembelajaran:</strong>
+        <ul>
+          <li>Menceritakan perasaan pribadi dengan suara jelas.</li>
+          <li>Menyimpulkan perasaan tokoh dalam cerita.</li>
+        </ul>
+        <a class="view-btn" href="#" target="_blank">Lihat</a>
+      </div>
+    </div>
+
+    <!-- Kartu 2 -->
+    <div class="card">
+      <span class="emoji">🏫</span>
+      <span class="title">Media Pembelajaran</span>
+      <div class="content-detail">
+        <p>Media pembelajaran ini dirancang untuk siswa kelas 2 SD dalam mengenali dan memahami berbagai jenis perasaan seperti senang, sedih, marah, takut, dan terkejut. Berisi gambar ekspresi, video pendek, cerita bergambar, dan permainan tebak perasaan.</p>
+        <a class="view-btn" href="#" target="_blank">Lihat</a>
+      </div>
+    </div>
+
+    <!-- Kartu 3 -->
+    <div class="card">
+      <span class="emoji">🕵️</span>
+      <span class="title">Evaluasi</span>
+      <div class="content-detail">
+        <p>Evaluasi dilakukan melalui kuis dengan waktu <br> Juli, 23 by 09.00 pm.</p>
+        <a class="view-btn" href="#" target="_blank">Lihat</a>
+      </div>
+    </div>
+
+    <!-- Kartu 4 -->
+    <div class="card">
+      <span class="emoji">📌</span>
+      <span class="title">Penugasan Mandiri</span>
+      <div class="content-detail">
+        <p>Tugas ini membantu siswa berlatih refleksi diri dan memperkuat pemahaman tentang berbagai jenis perasaan dalam kehidupan sehari-hari.</p>
+        <a class="view-btn" href="#" target="_blank">Lihat</a>
+      </div>
+    </div>
+
+    <!-- Kartu 5 -->
+    <div class="card">
+      <span class="emoji">📚</span>
+      <span class="title">Forum Diskusi</span>
+      <div class="content-detail">
+        <p>Forum diskusi dilakukan secara luring atau daring. Siswa diajak untuk berbagi cerita tentang pengalaman saat merasa senang, sedih, atau takut agar mampu mengekspresikan perasaan dengan tepat.</p>
+        <a class="view-btn" href="#" target="_blank">Lihat</a>
+      </div>
+    </div>
+
+  </section>
+
+  <script>
+    document.querySelectorAll(".card").forEach((card) => {
+      card.addEventListener("click", (e) => {
+        if (e.target.classList.contains("view-btn")) return;
+        card.classList.toggle("open");
+      });
+    });
+  </script>
+
+</body>
+</html>

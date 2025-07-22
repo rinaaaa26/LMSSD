@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bahasa Indonesia – SD</title>
+
+    <!-- Google Font yang ceria untuk anak SD -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Gaya umum seluruh situs (pastikan file ini ada) -->
+    <link rel="stylesheet" href="../style.css" />
+
+    <!-- Gaya tambahan khusus halaman ini -->
+    <style>
+      :root {
+        /* Palet aksen untuk Bahasa Indonesia */
+        --bi-main: #e5507e;
+        --bi-light: #ffe0f0;
+      }
+
+      /* --------- Tata Letak --------- */
+      body {
+        background: linear-gradient(135deg, var(--bi-light), #ffffff 55%);
+        font-family: "Fredoka", sans-serif;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+      }
+
+      /* Breadcrumb back */
+      .back-link {
+        margin: 1.2rem 2rem 0;
+        font-size: 0.9rem;
+        text-decoration: none;
+        color: var(--bi-main);
+        font-weight: 600;
+        display: inline-flex;
+        align-items: center;
+        gap: 0.25rem;
+      }
+      .back-link:hover {
+        text-decoration: underline;
+      }
+
+      /* Judul Pelajaran */
+      .subject-header {
+        display: flex;
+        align-items: center;
+        gap: 0.65rem;
+        padding: 1rem 2rem 0 2rem;
+        font-size: 2rem;
+        font-weight: 600;
+        color: var(--bi-main);
+      }
+
+      /* Grid Sub‑topik */
+      .subtopics {
+        flex: 1;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+        gap: 1.5rem;
+        padding: 1.5rem 2rem 2.5rem;
+      }
+
+      /* Kartu Sub‑topik */
+      .card {
+        background: #ffffff;
+        border-radius: 22px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+        padding: 1.5rem 1rem 3.5rem; /* ruang bawah ekstra untuk tombol */
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+        cursor: pointer;
+      }
+      .card:hover {
+        transform: translateY(-6px) scale(1.03);
+        box-shadow: 0 10px 18px rgba(0, 0, 0, 0.12);
+      }
+
+      /* Emoji & Judul */
+      .card .emoji {
+        font-size: 2.4rem;
+        display: block;
+        margin-bottom: 0.5rem;
+      }
+      .card .title {
+        font-weight: 600;
+        font-size: 1.05rem;
+        letter-spacing: 0.3px;
+        color: #333;
+      }
+
+      /* Tombol VIEW */
+      .view-btn {
+        position: absolute;
+        bottom: -64px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: var(--bi-main);
+        color: #fff;
+        border: none;
+        border-radius: 30px;
+        padding: 0.5rem 1.6rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+        text-decoration: none;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+        transition: bottom 0.35s ease;
+      }
+
+      .card.open .view-btn {
+        bottom: 1.1rem;
+      }
+
+      /* Animasi bounce saat buka */
+      .card.open {
+        animation: bounce 0.35s;
+      }
+      @keyframes bounce {
+        0% {
+          transform: scale(1);
+        }
+        50% {
+          transform: scale(0.96);
+        }
+        100% {
+          transform: scale(1);
+        }
+      }
+
+      /* Responsif kecil HP */
+      @media (max-width: 520px) {
+        .subject-header {
+          font-size: 1.6rem;
+          padding-top: 0.5rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Link kembali -->
+    <a class="back-link" href="index.html">← Kembali ke Daftar</a>
+
+    <!-- Judul Pelajaran -->
+    <div class="subject-header">📖 Bahasa Indonesia</div>
+
+    <!-- Grid Sub‑topik -->
+    <section class="subtopics">
+      <!-- 8 kartu sub‑topik; tambahkan hingga 16 sesuai kebutuhan -->
+      <div class="card">
+        <span class="emoji">🎭</span>
+        <span class="title">Mengenal Perasaan</span>
+        <a class="view-btn" href="materi.html">VIEW</a>
+      </div>
+
+      <div class="card">
+        <span class="emoji">🧑‍🏫</span>
+        <span class="title">Menjaga Kesehatan</span>
+        <a class="view-btn" href="materi2.html">VIEW</a>
+      </div>
+
+      <div class="card">
+        <span class="emoji">🕵️</span>
+        <span class="title">Berhati‑hati&nbsp;di&nbsp;Mana&nbsp;Saja</span>
+        <a class="view-btn" href="materi3.html">VIEW</a>
+      </div>
+
+      <div class="card">
+        <span class="emoji">📌</span>
+        <span class="title">Keluargaku Unik</span>
+        <a class="view-btn" href="materi4.html">VIEW</a>
+      </div>
+
+      <div class="card">
+        <span class="emoji">📚</span>
+        <span class="title">Berteman dengan Keragaman</span>
+        <a class="view-btn" href="materi5.html">VIEW</a>
+      </div>
+
+      <div class="card">
+        <span class="emoji">🧠</span>
+        <span class="title">Bijak Memakai Uang</span>
+        <a class="view-btn" href="materi6.html">VIEW</a>
+      </div>
+
+      <div class="card">
+        <span class="emoji">📖</span>
+        <span class="title">Sayang Lingkungan</span>
+        <a class="view-btn" href="materi7.html">VIEW</a>
+      </div>
+
+      <div class="card">
+        <span class="emoji">✍️</span>
+        <span class="title">Hobi yang Jadi Prestasi</span>
+        <a class="view-btn" href="materi8.html">VIEW</a>
+      </div>
+    </section>
+
+    <!-- Script: buka/tutup kartu & animasi tombol -->
+    <script>
+      document.querySelectorAll(".card").forEach((card) => {
+        card.addEventListener("click", (e) => {
+          if (e.target.classList.contains("view-btn")) return; // biar tombol jalan
+          card.classList.toggle("open");
+        });
+      });
+    </script>
+  </body>
+</html>
